@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+	<title>Student Forum</title>
+    <link rel="icon" href="images/images.png" type="image/png" sizes="16x16"> 
+    
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/preloader.css">
+
+</head>
+<body>
+<!--<div class="se-pre-con"></div>-->
+        <div class="page-preloader">
+    <img class="preloader-logo" src="images/images.png" width="128">
+    <div class="preloader-preview-area">
+        <div class="ball-pulse">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+    <script>
+const loaderEl = document.getElementsByClassName('page-preloader')[0];
+document.addEventListener('readystatechange', (event) => {
+	// const readyState = "interactive";
+	const readyState = "complete";
+    
+	if(document.readyState == readyState) {
+		// when document ready add lass to fadeout loader
+		loaderEl.classList.add('page-preloader');
+		
+		// when loader is invisible remove it from the DOM
+		setTimeout(()=>{
+			loaderEl.parentNode.removeChild(loaderEl);
+		}, 2000)
+	}
+});
+    </script>
+<div class="theme-layout">
+	
+	<div class="responsive-header">
+		<div class="mh-head first Sticky">
+			<span class="mh-btns-left">
+				<a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
+			</span>
+			<span class="mh-text">
+				<a href="#" title=""><img src="images/logo.jpg" alt=""></a>
+			</span>
+			<span class="mh-btns-right">
+				<a class="fa fa-sliders" href="#shoppingbag"></a>
+			</span>
+		</div>
+		<div class="mh-head second">
+			<form class="mh-form">
+				<input placeholder="search" />
+				<a href="#/" class="fa fa-search"></a>
+			</form>
+		</div>
+		<nav id="menu" class="res-menu">
+			<ul>
+				<li href=""><a href="index.html"><i class="fa fa-home"></i>&nbsp Home</a>
+					
+				</li>
+				<li href=""><a href="#"><i class="fa fa-users"></i>&nbsp <span>Discussion</span></a>
+						<ul>
+						<li><a href="forum.html" title="">Forum</a></li>
+						<li><a href="forum-create-topic.html" title="">Add Discussion</a></li>
+							
+					</ul>
+				</li>
+				<li href=""><a href="setting%20page.html"><i class="fa fa-gear"></i>&nbsp Account Setting</a>
+					
+					<ul>
+						<li><a href="profile.html" title="">Profile</a></li>
+						<li><a href="setting%20page.html" title="">Edit account setting</a></li>
+						<li><a href="setting%20page.html" title="">Edit-password</a></li>
+                        <li><a href="setting%20page.html" title="">Logout</a></li>
+					</ul>
+				</li>
+                
+                <li>
+                    <a href="Notification.html" title=""><i class="fa fa-bell"></i>&nbsp Nottifications</a>
+
+				</li>
+                 <li>
+                    <a href="message.html" title=""><i class="fa fa-inbox"></i>&nbsp Messages</a>
+
+				</li>
+            </ul>
+
+	
+		
+				
+		
+		</nav>
+		
+	</div><!-- responsive header -->
+	
+	<div class="topbar stick">
+		<div class="logo">
+			<a title="" href="index.html"><img src="images/logo.jpg" alt=""></a>
+		</div>
+		
+		<div class="top-area">
+			<ul class="main-menu">
+				<li>
+					<a href="index.html" title=""><i class="fa fa-home"></i>&nbsp Home</a>
+				</li>
+				<li>
+					<a href="" title=""><i class="fa fa-users"></i>&nbsp Discussion</a>
+					<ul>
+						<li><a href="forum.html" title="">Forum</a></li>
+						<li><a href="forum-create-topic.html" title="">Add Discussion</a></li>
+							
+					</ul>
+				</li>
+				<li>
+                    <a href="" title=""><i class="fa fa-gear"></i>&nbsp Account settings</a>
+					<ul>
+						<li><a href="profile.html" title="">Profile</a></li>
+						<li><a href="setting%20page.html" title="">Edit account setting</a></li>
+						<li><a href="setting%20page.html" title="">Edit-password</a></li>
+                        <li><a href="" title="">Logout</a></li>
+					</ul>
+				</li>
+                <li>
+                    <a href="Notification.html" title=""><i class="fa fa-bell"></i>&nbsp Nottifications</a>
+                    
+				</li>
+                 <li>
+                    <a href="message.html" title=""><i class="fa fa-inbox"></i>&nbsp Messages</a>
+
+				</li>
+			</ul>
+			<ul class="setting-area">
+				<li>
+					<a href="#" title="Search" data-ripple=""><i class="ti-search"></i></a>
+					<div class="searched">
+						<form method="post" class="form-search">
+							<input type="text" placeholder="Search Friend" >
+							<button data-ripple><i class="ti-search" ></i></button>
+						</form>
+					</div>
+				</li>
+				<li>
+					<a href="#" title="Notification" data-ripple="">
+						<i class="ti-bell"></i><span>20</span>
+					</a>
+					<div class="dropdowns">
+						<span>4 New Notifications</span>
+						<ul class="drops-menu">
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/friend-avatar10.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>sarah Loren</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag green">New</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/friend-avatar3.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Jhon doe</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag red">Reply</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/friend-avatar4.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Andrew</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag blue">Unseen</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/friend-avatar11.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Tom cruse</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag">New</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/friend-avatar9.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Amy</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag">New</span>
+							</li>
+						</ul>
+						<a href="Notification.html" title="" class="more-mesg">view more</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>12</span></a>
+					<div class="dropdowns">
+						<span>5 New Messages</span>
+						<ul class="drops-menu">
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/forum-author2.png" alt="">
+									<div class="mesg-meta">
+										<h6>sarah Loren</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag green">New</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/friend-avatar.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Jhon doe</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag red">Reply</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/friend-avatar3.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Andrew</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag blue">Unseen</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/friend-avatar4.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Tom cruse</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag">New</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/friend-avatar8.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Amy</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag">New</span>
+							</li>
+						</ul>
+                        <a href="message.html" title="" class="more-mesg"><a href="message.html" >view more</a></a>
+					</div>
+				</li>
+			</ul>
+					<div class="user-img">
+				<img src="images/resources/friend-avatar9.jpg" alt="">
+				<div class="user-setting">
+					<a href="profile.html" title="profile"><i class="ti-user"></i>view profile</a>
+					<a href="setting%20page.html" title=""><i class="ti-settings"></i>account setting</a>
+					<a href="#" title=""><i class="ti-power-off"></i>log out</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section>
+		<div class="gap100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9">
+						<div class="forum-warper">
+							<div class="post-filter-sec">
+								<form method="post" class="filter-form">
+									<input type="post" placeholder="Search post">
+									<button><i class="ti-search"></i></button>
+								</form>
+								<div class="purify">
+									<span>filter by</span>
+									<select>
+										<option>Assending A-Z</option>
+										<option>Desending Z-A</option>
+										<option>Desending (date)</option>
+										<option>Asending (date)</option>
+									</select>
+									<a href="#" title="">purify</a>
+								</div>
+							</div>
+							<a class="addnewforum" href="forum-create-topic.html" title=""><i class="fa fa-plus"></i> Add New</a>
+						</div>
+						<div class="forum-list">
+							<table class="table table-responsive">
+								<thead>
+									<tr>
+										<th scope="col">Discussions</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<i class="fa fa-comments"></i> 
+											<a >Asset for creating a beautiful website</a>
+											<p>list your recommended website and when you start to create your website so please check your laptop window and battery.</p>
+										</td>
+                                        <td><a href="forum-open-topic.html"><i class="fa fa-comments-o" ></i></a><ins>1.2k</ins></td>
+										<td><i class="fa fa-eye"></i><ins>1.2k</ins></td>
+                                        <td><i class="fa fa-heart"></i><ins>1.2k</ins></td>
+									</tr>
+									<tr>
+										<td>
+											<i class="fa fa-comments"></i> 
+											<a >Modifications & Useful Snippets</a>
+											<p>Share your own custom snippets for modifying the winku template beyond it's limits.</p>
+										</td>
+                                        <td><a href="forum-open-topic.html"><i class="fa fa-comments-o" ></i></a><ins>1.2k</ins></td>
+										<td><i class="fa fa-eye"></i><ins>1.2k</ins></td>
+                                        <td><i class="fa fa-heart"></i><ins>1.2k</ins></td>
+									</tr>
+									<tr>
+										<td>
+											<i class="fa fa-comments"></i> 
+											<a >Pricing & Redunds</a>
+											<p>Questions regarding pricing and refunds should be posted here.</p>
+										</td>
+                                        <td><a href="forum-open-topic.html"><i class="fa fa-comments-o" ></i></a><ins>1.2k</ins></td>
+										<td><i class="fa fa-eye"></i><ins>1.2k</ins></td>
+                                        <td><i class="fa fa-heart"></i><ins>1.2k</ins></td>
+									</tr>
+									<tr>
+										<td>
+											<i class="fa fa-comments"></i> 
+											<a >SEO Optimization</a>
+											<p>Post your SEO optimizations and tips via this thread.</p>
+										</td>
+                                        <td><a href="forum-open-topic.html"><i class="fa fa-comments-o" ></i></a><ins>1.2k</ins></td>
+										<td><i class="fa fa-eye"></i><ins>1.2k</ins></td>
+                                        <td><i class="fa fa-heart"></i><ins>1.2k</ins></td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<aside class="sidebar full-style">
+							<div class="widget">
+									
+							</div>
+							
+							<div class="widget">
+								<h4 class="widget-title"><i class="fa fa-fire"></i>Trending Topics</h4>
+								<ul class="feature-topics">
+									<li>
+										<i class="fa fa-star"></i>
+										<a href="#" title="">What is your favourit season in summer?</a>
+										<span>Abdullahi &nbsp &nbsp <span>16 minutes ago</span></span>
+									</li>
+									<li>
+										<i class="fa fa-star"></i>
+										<a href="#" title="">The new Goddess of War trailer was launched at E3!</a>
+										<span>Abdullahi &nbsp &nbsp <span>16 minutes ago</span></span>
+									</li>
+									<li>
+										<i class="fa fa-star"></i>
+										<a href="#" title="">Summer is Coming! Picnic in the east boulevard park</a>
+                                        <span>Abdullahi &nbsp &nbsp <span>16 minutes ago</span></span>
+										
+                                        
+									</li>
+								</ul>
+							</div>
+						</aside>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+</div>
+    </div>
+	
+	<script src="js/main.min.js"></script>
+	<script src="js/script.js"></script>
+
+
+</body>	
+
+</html>

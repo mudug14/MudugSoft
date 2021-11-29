@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  font-weight: normal;
+  
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 200px;
+  height: 100%;
+}
+/* Backend Panel Start */
+.clear-backend {
+  background: #fff;
+  width: 100%;
+  height: 700px;
+  position: relative;
+}
+.clear-backend > input {
+  position: absolute;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.clear-backend > input:hover {
+  cursor: pointer;
+}
+.clear-backend > input:hover + span,
+.clear-backend > input:checked + span {
+  background: #fff;
+  color: #1ABC9C;
+}
+.clear-backend > input:checked + span + i {
+  color: #1ABC9C;;
+}
+.clear-backend > i {
+  position: absolute;
+  margin-top: -40px;
+  padding: 0 20px;
+  font-size: 20px;
+  height: 100%;
+}
+.clear-backend > span,
+.clear-backend > i {
+  -webkit-transition: all .5s;
+     -moz-transition: all .5s;
+     -o-transition: all .5s;
+      transition: all .5s;
+}
+.clear-backend > input,
+.clear-backend > span {
+  background: #f0f0f0;
+  display: block;
+  width: 200px;
+  height: 60px;
+  line-height: 80px;
+  text-align: center;
+  z-index: 9;
+}
+.tab-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 10;
+    
+  width: calc(100% - 200px);
+  height: 100%;
+  overflow: hidden;
+  background-size: 150px;
+}
+.tab-content section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: none;
+}
+.clear-backend > input.tab-1:checked ~ .tab-content .tab-item-1 {
+  display: block;
+}
+.clear-backend > input.tab-2:checked ~ .tab-content .tab-item-2 {
+  display: block;
+}
+.clear-backend > input.tab-3:checked ~ .tab-content .tab-item-3 {
+  display: block;
+}
+.clear-backend > input.tab-4:checked ~ .tab-content .tab-item-4 {
+  display: block;
+}
+.name , .email , .desc , .oldpassword, 
+.new-password , .repeat-password
+{
+  display: block;
+  padding: 10px;
+  text-transform: none;
+  font-size: 15px;
+  
+  font-family:  sans-serif;
+  font-variant: normal;
+  
+}
+#input-name , #input-email , #desc , #input-password ,
+ #input-npassword , #input-repeatpss
+{
+  display: block;
+  width: 100%;
+  border: 2px solid #298089;
+  padding:10px;
+  font-size: .5rem 18px;
+  border-radius:5px;
+}
+.form , .form-tab2{
+  max-width: 600px;
+  margin-top: 10px;
+  margin: 20px;
+  border: 0;
+  border-color: lightgrey;
+ }
+ #savebtn{
+  border: 0;
+  background: #343050;
+  padding: .2rem;
+  color: white;
+  margin: 1rem 0;
+  width: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+ }
